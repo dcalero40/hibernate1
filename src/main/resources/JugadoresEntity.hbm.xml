@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="nba.JugadoresEntity" table="jugadores" schema="NBA">
+        <id name="codigo">
+            <column name="codigo" sql-type="int(11)"/>
+        </id>
+        <property name="nombre">
+            <column name="Nombre" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="procedencia">
+            <column name="Procedencia" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="altura">
+            <column name="Altura" sql-type="varchar(4)" length="4" not-null="true"/>
+        </property>
+        <property name="peso">
+            <column name="Peso" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="posicion">
+            <column name="Posicion" sql-type="varchar(5)" length="5" not-null="true"/>
+        </property>
+        <property name="nombre_equipo">
+            <column name="Nombre_equipo"/>
+        </property>
+    </class>
+</hibernate-mapping>
